@@ -1,0 +1,210 @@
+{
+  "info": {
+    "_postman_id": "879e91eb-6e4e-495b-885c-b795b5224b1b",
+    "name": "Insights Services Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Insights List",
+      "id": "498b5043-6dd3-4834-bdfb-d7717834a9d6",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "disabled": false
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "disabled": false
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/insights",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "insights"
+          ]
+        },
+        "description": "Retrieve a list of all insights."
+      },
+      "response": []
+    },
+    {
+      "name": "Get Insight by ID",
+      "id": "65ac66ab-effc-4ae2-9468-53a0b492afdf",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "disabled": false
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "disabled": false
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/insights/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "insights",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id"
+            }
+          ]
+        },
+        "description": "Retrieve a specific insight by its ID."
+      },
+      "response": []
+    },
+    {
+      "name": "Create Insight",
+      "id": "2e1d1cf2-ecd4-4c4d-b237-f069eb67e4fe",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "disabled": false
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"title\": \"New Insight\", \"description\": \"This is a sample insight description.\", \"category\": \"performance\", \"severity\": \"high\", \"tags\": [\"api\", \"monitoring\"]}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/insights",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "insights"
+          ]
+        },
+        "description": "Create a new insight with the provided data."
+      },
+      "response": []
+    },
+    {
+      "name": "Update Insight",
+      "id": "c27b6bb3-8345-4d58-ba79-f874f261fa47",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "disabled": false
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"title\": \"Updated Insight Title\", \"description\": \"Updated description for this insight.\", \"category\": \"performance\", \"severity\": \"medium\", \"tags\": [\"api\", \"monitoring\", \"updated\"]}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/insights/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "insights",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id"
+            }
+          ]
+        },
+        "description": "Update an existing insight by its ID."
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Insight",
+      "id": "3fd204c6-cfc0-4902-8977-9432d46667df",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "disabled": false
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "disabled": false
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/insights/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "insights",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id"
+            }
+          ]
+        },
+        "description": "Delete a specific insight by its ID."
+      },
+      "response": []
+    }
+  ]
+}

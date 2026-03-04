@@ -1,0 +1,20 @@
+{
+  "workspace": {
+    "id": "4079e450-6b6f-4f18-a487-5a3215983283"
+  },
+  "entities": {
+    "collections": [
+      "../postman/collections/Test collection_52115010-1913f878-d0ce-481d-bc27-e5961653d1c9.postman_collection.json",
+      "../postman/collections/New Collection_52115010-2b8b8b0f-937d-46c9-95fa-d52bd7812aa2.postman_collection.json",
+      "../postman/collections/New Collection_52115010-80555002-ecec-45be-9773-757363a6538f.postman_collection.json",
+      "../postman/collections/Insights Services Collection_52115010-879e91eb-6e4e-495b-885c-b795b5224b1b.postman_collection.json",
+      "../postman/collections/local-path-storage-local-path-provisioner_52115010-cf019dd3-b90b-4bc3-ae42-0cd7f132c9c8.postman_collection.json"
+    ],
+    "environments": [
+      "../postman/environments/Insights Services Environment_6a6c6cb6-87d0-4c92-85ca-c3ed2b94f10b.postman_environment.json"
+    ],
+    "specs": [],
+    "flows": [],
+    "globals": []
+  }
+}
